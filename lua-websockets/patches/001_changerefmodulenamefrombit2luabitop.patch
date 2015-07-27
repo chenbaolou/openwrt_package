@@ -1,0 +1,11 @@
+Index: lua-websockets-1.0.0/src/websocket/bit.lua
+===================================================================
+--- lua-websockets-1.0.0.orig/src/websocket/bit.lua
++++ lua-websockets-1.0.0/src/websocket/bit.lua
+@@ -6,5 +6,5 @@ if has_bit32 then
+   return bit
+ else
+   -- luajit / lua 5.1 + luabitop
+-  return require'bit'
++  return require'luabitop'
+ end

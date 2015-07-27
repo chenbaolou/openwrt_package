@@ -1,0 +1,29 @@
+Index: lua-websockets-1.0.0/Makefile
+===================================================================
+--- /dev/null
++++ lua-websockets-1.0.0/Makefile
+@@ -0,0 +1,24 @@
++# Default prefix
++PREFIX ?= $(DESTDIR)/usr
++
++# System's lua directory (where Lua libraries are installed)
++LUA_DIR= $(PREFIX)/lib/lua
++
++install:
++	mkdir -p $(LUA_DIR)/websocket
++	cp src/websocket.lua $(LUA_DIR)
++	cp src/websocket/bit.lua $(LUA_DIR)/websocket
++	cp src/websocket/client.lua $(LUA_DIR)/websocket
++	cp src/websocket/client_copas.lua $(LUA_DIR)/websocket
++	cp src/websocket/client_ev.lua $(LUA_DIR)/websocket
++	cp src/websocket/client_sync.lua $(LUA_DIR)/websocket
++	cp src/websocket/ev_common.lua $(LUA_DIR)/websocket
++	cp src/websocket/frame.lua $(LUA_DIR)/websocket
++	cp src/websocket/handshake.lua $(LUA_DIR)/websocket
++	cp src/websocket/server.lua $(LUA_DIR)/websocket
++	cp src/websocket/server_copas.lua $(LUA_DIR)/websocket
++	cp src/websocket/server_ev.lua $(LUA_DIR)/websocket
++	cp src/websocket/sync.lua $(LUA_DIR)/websocket
++	cp src/websocket/tools.lua $(LUA_DIR)/websocket
++
++clean:
